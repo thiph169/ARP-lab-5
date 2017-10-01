@@ -12,7 +12,7 @@
 #' 
 #' 
 coordinates <- function(address = NULL){
-  require("httr")
+  requireNamespace("httr")
   #Intial
   if(is.null(address) | !is.character(address)){
     stop("Use character values")

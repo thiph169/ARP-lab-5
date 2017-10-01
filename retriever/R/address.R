@@ -12,9 +12,9 @@
 #' @export
 #' 
 #' 
-#' 
+
 address <- function(latlong = NULL){
-  require("httr")
+  requireNamespace("httr")
   #Intial
   if(is.null(latlong) | !is.character(latlong)){
     stop("Use character values")

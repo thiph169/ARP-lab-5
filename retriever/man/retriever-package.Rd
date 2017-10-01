@@ -17,9 +17,5 @@ The DESCRIPTION file:
 \packageAuthor{retriever}
 Maintainer: \packageMaintainer{retriever}
 }
-\references{}
 \keyword{ package }
-\seealso{
-\code{\link[<pkg>:<pkg>-package]{<pkg>}} 
-}
-\examples{}
+
