@@ -1,0 +1,20 @@
+Package: retriever
+Type: Package
+Title: Address and Coordinates Retriever
+Version: 1.0
+Date: 2017-09-29
+Authors@R: c(person("Thi", "Pham", email = "thiph169@student.liu.se", role = "cre"), person("Somaya", "Khoda Bakhsh", email = "somkh364@student.liu.se", role = "aut"))
+Maintainer: Thi<thiph169@student.liu.se>
+Description: This package retrieves address and coordinates(e.g lattitude and longitude) using Google Geocode API.
+License: CC0
+LazyData: true
+Depends: R (>= 2.10)
+RoxygenNote: 6.0.1
+Suggests: testthat,
+          knitr,
+          rmarkdown, 
+          httr
+VignetteBuilder: knitr
+Imports: httr
+
+
