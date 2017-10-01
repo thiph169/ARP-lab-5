@@ -1,4 +1,3 @@
-
 #' Title Coordinates Retriver
 #' 
 #' @description The coodinate function uses the google geocode API to retriever coordinates given address.
@@ -7,11 +6,9 @@
 #'
 #' @return A dataframe cointaining Full address and the coordinates
 #' 
-#' @examples coordinates(address="Mäster Mattias väg 7, Linköping, Sweden")
+#' @examples coordinates(address="Master Mattias vag 7, Linkoping, Sweden")
 #' 
 #' @export
-#' 
-#' 
 #' 
 #' 
 coordinates <- function(address = NULL){
@@ -26,8 +23,6 @@ coordinates <- function(address = NULL){
   
   url <- "https://maps.googleapis.com/maps/api/geocode/json?address="
   key <- "&key=AIzaSyCd2oCbFa2bo2p29qwX9J9Qfj4WYbRkmUI"
-  #url <- "https://maps.googleapis.com/maps/api/geocode/json?address="
-  #key <- "&key=AIzaSyCcRPdN_sAcwiovz7EPAq31l5cFIxp-aW4"
   url <- paste0(url,address,key)
   get_res <- httr::GET(url)
   
