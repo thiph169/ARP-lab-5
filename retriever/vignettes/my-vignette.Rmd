@@ -1,0 +1,53 @@
+---
+title: "retriever"
+author: "Thi Pham and Somaya Khoda Bakhsh"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+##Introduction
+
+The **retriever** package uses the google geocode API to provide address and coordinates. It consists two main functions: 
+
+1. address
+2. coordinates
+
+To use both functions, it is **required to have the package httr installed.** 
+
+## Functions usage
+
+### address function
+
+This function provides the user with the address of a given a set of coordinates. The funtion uses the google geocode API to retrieve the result.
+
+The input is **latlong**, a character string that includes the latitude and the longitude.
+
+The function returns a dataframe containing full address and coordinates:
+
+```{r, fig.show='hold', message=FALSE}
+library(retriever)
+head(address("41.40450 2.17429"), n = 5)
+tail(address("58.39783 15.57600"), n = 5)
+```
+
+
+###coordinates function
+
+This function provides the user with the coordinates of a given address. The function uses the google geocode API to retrieve the result.
+
+The input is **address**, a character string that includes address components.
+
+If the address has partial match, different locations with their full names and  coordinates will be retrieved as a dataframe:
+
+```{r, fig.show='hold', message=FALSE}
+library(retriever)
+coordinates("Parliament House, Australia")
+coordinates("Eiffel Tower, Paris")
+```
+
+
+
