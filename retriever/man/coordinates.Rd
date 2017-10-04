@@ -16,6 +16,6 @@ A dataframe cointaining Full address and the coordinates
 The coodinate function uses the google geocode API to retriever coordinates given address.
 }
 \examples{
-coordinates(address="Master Mattias vag 7, Linkoping, Sweden")
+coordinates(address="Master Mattias vag 7, Linkoping")
 
 }

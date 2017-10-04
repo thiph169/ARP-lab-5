@@ -6,11 +6,13 @@
 #'
 #' @return A dataframe cointaining Full address and the coordinates
 #' 
-#' @examples coordinates(address="Master Mattias vag 7, Linkoping, Sweden")
+#' @examples coordinates(address="Master Mattias vag 7, Linkoping")
 #' 
 #' @export
 #' 
-#' 
+# Master Mattias vag 7, Linkoping, Sweden 
+# Example: coordinates(address="Mäster Mattias väg 7, Linköping, Sweden")
+
 coordinates <- function(address = NULL){
   requireNamespace("httr")
   #Intial
@@ -39,8 +41,8 @@ coordinates <- function(address = NULL){
     full_adress <- unlist(lapply(content_res[["results"]], "[[", "formatted_address"))
     
     res_df <- data.frame("Full_address" = full_adress,
-                         "lat" = unlist(coord[,1]),
-                         "lng" = unlist(coord[,2]),
+                         "Latitude" = unlist(coord[,1]),
+                         "Longitude" = unlist(coord[,2]),
                          stringsAsFactors = FALSE)
     
     rownames(res_df) <- NULL

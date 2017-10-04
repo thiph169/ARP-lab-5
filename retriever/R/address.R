@@ -53,8 +53,8 @@ address <- function(latlong = NULL){
     full_adress <- unlist(lapply(content_res[["results"]], "[[", "formatted_address"))
     
     res_df <- data.frame("Full_address" = full_adress,
-                         "lat" = unlist(coord[,1]),
-                         "lng" = unlist(coord[,2]),
+                         "Latitude" = unlist(coord[,1]),
+                         "Longitude" = unlist(coord[,2]),
                          stringsAsFactors = FALSE)
     
     rownames(res_df) <- NULL

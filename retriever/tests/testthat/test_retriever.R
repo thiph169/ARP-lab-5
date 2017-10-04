@@ -10,8 +10,8 @@ test_that("Overall test",{
               throws_error("Use character values"))
   expect_that(is.data.frame(coordinates(address = "bjornskogsgrnd 18")),
               is_true())
-  expect_that(coordinates(address = "Parliament Dr, Canberra ACT 2600, Australia")[,"lat"],
-              equals(-35.306486))
+  expect_that(coordinates(address = "90 Orchard St, New York, NY 10002, USA")[,"Latitude"],
+                          equals(40.718181))
   expect_that(coordinates(address = "?"),
               throws_error("No match found"))
   expect_that(coordinates(address = "Parliament Dr, Canberra ACT 2600, Australia"),
