@@ -12,7 +12,7 @@
 
 <meta name="author" content="Thi Pham and Somaya Khoda Bakhsh" />
 
-<meta name="date" content="2017-10-03" />
+<meta name="date" content="2017-10-04" />
 
 <title>retriever</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">retriever</h1>
 <h4 class="author"><em>Thi Pham and Somaya Khoda Bakhsh</em></h4>
-<h4 class="date"><em>2017-10-03</em></h4>
+<h4 class="date"><em>2017-10-04</em></h4>
 
 
 
@@ -92,19 +92,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>The function returns a dataframe containing full address and coordinates:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(retriever)
 <span class="kw">head</span>(<span class="kw">address</span>(<span class="st">&quot;41.40450 2.17429&quot;</span>), <span class="dt">n =</span> <span class="dv">5</span>)</code></pre></div>
-<pre><code>##                                       Full_address      lat      lng
-## 1 Carrer de la Marina, 255, 08025 Barcelona, Spain 41.40455 2.174106
-## 2          Sagrada Família, 08025 Barcelona, Spain 41.40450 2.174290
-## 3             La Sagrada Familia, Barcelona, Spain 41.40448 2.175728
-## 4                       Eixample, Barcelona, Spain 41.39184 2.164197
-## 5                                 Barcelona, Spain 41.38506 2.173404</code></pre>
+<pre><code>##                                       Full_address Latitude Longitude
+## 1 Carrer de la Marina, 255, 08025 Barcelona, Spain 41.40455  2.174106
+## 2          Sagrada Família, 08025 Barcelona, Spain 41.40450  2.174290
+## 3             La Sagrada Familia, Barcelona, Spain 41.40448  2.175728
+## 4                       Eixample, Barcelona, Spain 41.39184  2.164197
+## 5                                 Barcelona, Spain 41.38506  2.173404</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(<span class="kw">address</span>(<span class="st">&quot;58.39783 15.57600&quot;</span>), <span class="dt">n =</span> <span class="dv">5</span>)</code></pre></div>
-<pre><code>##                     Full_address      lat      lng
-## 3       583 30 Linköping, Sweden 58.39581 15.57284
-## 4              Linköping, Sweden 58.35375 15.64030
-## 5 Linköping Municipality, Sweden 58.37992 15.61822
-## 6    Östergötland County, Sweden 58.34536 15.51978
-## 7                         Sweden 60.12816 18.64350</code></pre>
+<pre><code>##                     Full_address Latitude Longitude
+## 3       583 30 Linköping, Sweden 58.39581  15.57284
+## 4              Linköping, Sweden 58.35375  15.64030
+## 5 Linköping Municipality, Sweden 58.37992  15.61822
+## 6    Östergötland County, Sweden 58.34536  15.51978
+## 7                         Sweden 60.12816  18.64350</code></pre>
 </div>
 <div id="coordinates-function" class="section level3">
 <h3>coordinates function</h3>
@@ -113,14 +113,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>If the address has partial match, different locations with their full names and coordinates will be retrieved as a dataframe:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(retriever)
 <span class="kw">coordinates</span>(<span class="st">&quot;Parliament House, Australia&quot;</span>)</code></pre></div>
-<pre><code>##                                  Full_address       lat      lng
-## 1 Parliament Dr, Canberra ACT 2600, Australia -35.30822 149.1244</code></pre>
+<pre><code>##                                  Full_address  Latitude Longitude
+## 1 Parliament Dr, Canberra ACT 2600, Australia -35.30822  149.1244</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">coordinates</span>(<span class="st">&quot;Eiffel Tower, Paris&quot;</span>)</code></pre></div>
-<pre><code>##                                                  Full_address      lat
+<pre><code>##                                                  Full_address Latitude
 ## 1 Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France 48.85837
-##        lng
-## 1 2.294481</code></pre>
+##   Longitude
+## 1  2.294481</code></pre>
 </div>
+</div>
+<div id="shinyapp" class="section level2">
+<h2>shinyApp</h2>
+<p>The package including shinyApp which is a simple <em>Application</em> that makes it possible for user to interactively analyze using this API package.</p>
+<p>To run shinyApp:</p>
+<p><strong>shiny::runGitHub(“ARP-lab-5”, username = “thiph169”,ref = “master”,subdir = “retriever/shinyGeo”)</strong></p>
+<hr />
 </div>
 
 

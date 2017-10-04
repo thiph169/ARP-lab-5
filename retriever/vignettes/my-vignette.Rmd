@@ -49,5 +49,16 @@ coordinates("Parliament House, Australia")
 coordinates("Eiffel Tower, Paris")
 ```
 
+##shinyApp
+
+The package including shinyApp which is a simple *Application* that makes it possible for user to interactively analyze using this API package.
+
+To run shinyApp:
+
+**shiny::runGitHub("ARP-lab-5", username = "thiph169",ref = "master",subdir = "retriever/shinyGeo")**
+
+---
+
+
 
 

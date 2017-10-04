@@ -1,3 +1,7 @@
+
+#runGitHub("ARP-lab-5", username = "thiph169",ref = "master",subdir = "retriever/shinyGeo")
+
+
 library(shiny)
 library(retriever)
 
